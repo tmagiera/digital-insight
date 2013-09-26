@@ -4,14 +4,14 @@ TODO
 work on host
 -----------------------------
 1.  install vagrant & virtualbox
-2.  change dir to c:\www\ & git clone https://github.com/tmagiera/digital-insight.git
-3.  change hosts file: 192.168.56.101	digital-insight.dev
-4.  run in cmd : vagrant up
+2.  change dir to `c:\www\` & `git clone https://github.com/tmagiera/digital-insight.git`
+3.  change hosts file: `192.168.56.101	digital-insight.dev`
+4.  run in cmd : `vagrant up`
 5.  use puttygen to load ssh key from
     `C:/Users/tmagiera/.vagrant.d/insecure_private_key`
     and save to
     `C:/Users/tmagiera/.vagrant.d/key.ppk`
-6.  connect SSH to 192.168.56.101 with key from C:/Users/tmagiera/.vagrant.d/key.ppk (connection->SSH->Auth)
+6.  connect SSH to `192.168.56.101` with key from `C:/Users/tmagiera/.vagrant.d/key.ppk` (connection->SSH->Auth)
 
 
 work on server

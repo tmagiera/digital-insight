@@ -21,7 +21,4 @@ Vagrant.configure("2") do |config|
     puppet.module_path = "modules"
     puppet.options = ['--verbose']
   end
-
-  config.vm.provision :shell, :inline =>
-    "sudo bash /var/www/digital-insight/files/odbc.sh"
 end

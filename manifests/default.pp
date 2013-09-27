@@ -23,7 +23,8 @@ package { [
     'build-essential',
     'vim',
     'curl',
-    'git-core'
+    'git-core',
+    'libssl1.0.0'
   ]:
   ensure  => 'installed',
 }

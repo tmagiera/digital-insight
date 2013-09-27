@@ -1,0 +1,7 @@
+parameters:
+#    accord_digital_insight.example.class: Accord\DigitalInsightBundle\Example
+
+services:
+#    accord_digital_insight.example:
+#        class: %accord_digital_insight.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

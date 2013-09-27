@@ -1,0 +1,4 @@
+accord_digital_insight:
+    resource: "@AccordDigitalInsightBundle/Resources/config/routing.yml"
+    prefix:   /
+

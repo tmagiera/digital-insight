@@ -88,5 +88,5 @@ work on server
 
 7.  proof that odbc work in php
     ```
-    php connection.php`
+    php connection.php
     ```

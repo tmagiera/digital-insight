@@ -27,7 +27,7 @@ work on host
     `C:/Users/tmagiera/.vagrant.d/insecure_private_key`
     and save to
     `C:/Users/tmagiera/.vagrant.d/key.ppk`
-6.  connect SSH to `192.168.56.101` with key from `C:/Users/tmagiera/.vagrant.d/key.ppk` (connection->SSH->Auth)
+6.  connect SSH to `vagrant@192.168.56.101` with key from `C:/Users/tmagiera/.vagrant.d/key.ppk` (connection->SSH->Auth)
 
 
 work on server

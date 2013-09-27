@@ -81,7 +81,8 @@ work on server
     ```
     in php, change USER and PASS (<- dev db)
     ```
-    php connection.php
+    <?php
+    $db = new PDO('odbc:DSN=mssql_dev;UID=USER;PWD=PASS');
     ```
 
 3.  pretty URLs for application to change in /etc/apache2/sites-enabled/1-digital-insight.dev.conf

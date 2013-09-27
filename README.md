@@ -68,15 +68,15 @@ work on server
     sudo ln -s /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 libcrypto.so.10
 
     cd /home/vagrant/msodbcsql-11.0.2270.0/
-    sudo bash ./install.sh install --force`
+    sudo bash ./install.sh install --force
     ```
 
     odbc installed, some additional config, just for confirmation that works
     in shell
     ```
-    isql -v accord_dev USER PASS
+    isql -v mssql_dev USER PASS (<- dev db)
     ```
-    in php
+    in php, change USER and PASS (<- dev db)
     ```
     php connection.php
     ```

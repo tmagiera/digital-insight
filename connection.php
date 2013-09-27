@@ -6,5 +6,5 @@
  * Time: 15:56
  * To change this template use File | Settings | File Templates.
  */
-$db = new PDO('odbc:DSN=accord_dev;UID=ciuser;PWD=manicminer');
+$db = new PDO('odbc:DSN=mssql_dev;UID=USER;PWD=PASS');
 

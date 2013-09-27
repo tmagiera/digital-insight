@@ -5,35 +5,47 @@ work on host
 -----------------------------
 1.  install vagrant & virtualbox
 2.  change dir to
-    ```c:\www\```
+    `c:\www\`
     &
-    ```git clone https://github.com/tmagiera/digital-insight.git```
+    `git clone https://github.com/tmagiera/digital-insight.git`
     &
     change dir to
-    ```c:\www\digital-insight```
+    `c:\www\digital-insight`
 3.  change hosts file:
-    ```192.168.56.101	digital-insight.dev```
+
+    ```
+    192.168.56.101	digital-insight.dev
+    ```
+
 4.  run in cmd :
-    ```vagrant up```
+
+    ```
+    vagrant up
+    ```
+
 5.  use puttygen to load ssh key from
-    ```C:/Users/tmagiera/.vagrant.d/insecure_private_key```
+    `C:/Users/tmagiera/.vagrant.d/insecure_private_key`
     and save to
-    ```C:/Users/tmagiera/.vagrant.d/key.ppk```
-6.  connect SSH to `192.168.56.101` with key from ```C:/Users/tmagiera/.vagrant.d/key.ppk``` (connection->SSH->Auth)
+    `C:/Users/tmagiera/.vagrant.d/key.ppk`
+6.  connect SSH to `192.168.56.101` with key from `C:/Users/tmagiera/.vagrant.d/key.ppk` (connection->SSH->Auth)
 
 
 work on server
 -----------------------------
 1.  change time zone in php.ini to
-    `date.timezone = "Europe/London"`
+    ```
+    date.timezone = "Europe/London"
+    ```
     in `/etc/php5/apache2/php.ini` & `/etc/php5/cli/php.ini`
 
-2.  `sudo /etc/init.d/apache2 restart`
+2.  ```
+    sudo /etc/init.d/apache2 restart
+    ```
+
 3.  you may check in browser: http://digital-insight.dev/web/app_dev.php
 
 4.  odbc install based on http://www.codesynthesis.com/~boris/blog/2011/12/02/microsoft-sql-server-odbc-driver-linux/
     changed for RedHat6
-
     ```Shell
     cd /home/vagrant
     cp /var/www/install/msodbcsql-11.0.2270.0.tar.gz /home/vagrant/
@@ -67,10 +79,14 @@ work on server
     Server          = 10.0.20.247
     ```
     just for confirmation that works
-    `isql -v accord_dev ciuser manicminer`
+    `isql -v accord_dev USER PASS`
 
 6.  missing library for php
-    `sudo apt-get install php5-odbc`
+    ```
+    sudo apt-get install php5-odbc
+    ```
 
 7.  proof that odbc work in php
-    `php connection.php`
+    ```
+    php connection.php`
+    ```

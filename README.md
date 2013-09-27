@@ -86,7 +86,7 @@ work on server
 
 3.  pretty URLs for application to change in /etc/apache2/sites-enabled/1-digital-insight.dev.conf
 
-```
+    ```
 <VirtualHost *:80>
     ServerAdmin webmaster@digital-insight.dev
     DocumentRoot /var/www/web/
@@ -118,6 +118,6 @@ work on server
     ErrorLog  /var/log/apache2/digital-insight.dev-error_log
     CustomLog /var/log/apache2/digital-insight.dev-access_log common
 </VirtualHost>
-```
+    ```
 
     now applicaton should be visible in URL : http://digital-insight.dev/

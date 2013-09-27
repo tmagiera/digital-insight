@@ -63,6 +63,7 @@ php::module { 'php5-intl': }
 php::module { 'php5-mcrypt': }
 php::module { 'php5-memcache': }
 php::module { 'php-fpdf': }
+php::module { 'php5-odbc': }
 
 class { 'php::devel':
   require => Class['php'],

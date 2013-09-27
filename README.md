@@ -83,3 +83,39 @@ work on server
     ```
     php connection.php
     ```
+
+3.  pretty URLs for application to change in /etc/apache2/sites-enabled/1-digital-insight.dev.conf
+
+```
+<VirtualHost *:80>
+    ServerAdmin webmaster@digital-insight.dev
+    DocumentRoot /var/www/web/
+    <Directory /var/www/web/>
+        DirectoryIndex app_dev.php
+        <IfModule mod_rewrite.c>
+            RewriteEngine On
+            RewriteCond %{REQUEST_URI}::$1 ^(/.+)/(.*)::\2$
+            RewriteRule ^(.*) - [E=BASE:%1]
+            RewriteCond %{ENV:REDIRECT_STATUS} ^$
+            RewriteRule ^app_dev\.php(/(.*)|$) %{ENV:BASE}/$2 [R=301,L]
+            RewriteCond %{REQUEST_FILENAME} -f
+            RewriteRule .? - [L]
+            RewriteRule .? %{ENV:BASE}/app.php [L]
+        </IfModule>
+
+        <IfModule !mod_rewrite.c>
+            <IfModule mod_alias.c>
+                RedirectMatch 302 ^/$ /app_dev.php/
+            </IfModule>
+        </IfModule>
+        Order allow,deny
+        Allow from All
+    </Directory>
+
+    ServerName digital-insight.dev
+    ServerAlias digital-insight.dev
+
+    ErrorLog  /var/log/apache2/digital-insight.dev-error_log
+    CustomLog /var/log/apache2/digital-insight.dev-access_log common
+</VirtualHost>
+```

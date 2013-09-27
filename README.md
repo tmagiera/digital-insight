@@ -119,3 +119,5 @@ work on server
     CustomLog /var/log/apache2/digital-insight.dev-access_log common
 </VirtualHost>
 ```
+
+    now applicaton should be visible in URL : http://digital-insight.dev/

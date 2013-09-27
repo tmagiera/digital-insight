@@ -100,7 +100,7 @@ work on server
             RewriteRule ^app_dev\.php(/(.*)|$) %{ENV:BASE}/$2 [R=301,L]
             RewriteCond %{REQUEST_FILENAME} -f
             RewriteRule .? - [L]
-            RewriteRule .? %{ENV:BASE}/app.php [L]
+            RewriteRule .? %{ENV:BASE}/app_dev.php [L]
         </IfModule>
 
         <IfModule !mod_rewrite.c>

@@ -1,3 +1,0 @@
-accord_digital_insight_homepage:
-    path:  /hello/{name}
-    defaults: { _controller: AccordDigitalInsightBundle:Default:index }

@@ -122,3 +122,10 @@ work on server
     ```
 
     now applicaton should be visible in URL : http://digital-insight.dev/
+
+4. configure working env to use VIM as a default editor
+    ```
+    export GIT_EDITOR=vim
+    export VISUAL=vim
+    export EDITOR=vim
+    ```

@@ -50,10 +50,10 @@ work on server
     changed for RedHat6
     ```Shell
     cd /home/vagrant
-    cp /var/www/install/msodbcsql-11.0.2270.0.tar.gz /home/vagrant/
+    cp /var/www/digital-insight/install/msodbcsql-11.0.2270.0.tar.gz /home/vagrant/
     tar -xzf msodbcsql-11.0.2270.0.tar.gz
 
-    cp /var/www/install/unixODBC-2.3.0.tar.gz /home/vagrant
+    cp /var/www/digital-insight/install/unixODBC-2.3.0.tar.gz /home/vagrant
     tar -xzf unixODBC-2.3.0.tar.gz
     cd unixODBC-2.3.0/
     ./configure --disable-gui --disable-drivers --enable-iconv --with-iconv-char-enc=UTF8 --with-iconv-ucode-enc=UTF16LE
@@ -71,7 +71,7 @@ work on server
 
     odbc installed, some additional config
     ```
-    sudo cp /var/www/files/odbc.ini /usr/local/etc/
+    sudo cp /var/www/digital-insight/files/odbc.ini /usr/local/etc/
     ```
 
     just for confirmation that works
@@ -90,8 +90,8 @@ work on server
     ```
 <VirtualHost *:80>
     ServerAdmin webmaster@digital-insight.dev
-    DocumentRoot /var/www/web/
-    <Directory /var/www/web/>
+    DocumentRoot /var/www/web/digital-insight/
+    <Directory /var/www/web/digital-insight/>
         DirectoryIndex app_dev.php
         <IfModule mod_rewrite.c>
             RewriteEngine On

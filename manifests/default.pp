@@ -42,7 +42,7 @@ apache::vhost { 'digital-insight.dev':
   serveraliases => [
     'digital-insight.dev'
   ],
-  docroot       => '/var/www/',
+  docroot       => '/var/www/digital-insight',
   port          => '80',
   env_variables => [
 ],
